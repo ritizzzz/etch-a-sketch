@@ -1,9 +1,10 @@
 *{
     margin: 0px;
     padding: 0px;
+    max-width: 100%;
 }
 
-header{
+header, footer{
     background-color: black;
     width: 100vw;
     color: white;
@@ -14,8 +15,9 @@ header{
 .main{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
     align-items: center;
+    height: 100vh;
 }
 
 .clear-set{
@@ -41,12 +43,12 @@ button{
 button:hover{
     background-color: rgb(92, 92, 250);
     color: rgb(241, 241, 92);
-    border: 1px solid black;
+    
 }
 
 
 .grid{
-    outline: 2px solid;
+    outline: 2px solid rgb(192, 192, 233);
     display: flex;
     width: 450px;
     height: 450px;    
@@ -61,4 +63,18 @@ button:hover{
 .child{
     height: 100%;
     flex-grow: 1;
+    /*
+    outline: 1px solid rgb(192, 192, 233);
+    border-radius: 5px;
+    */
+}
+
+a{
+    color: white;
+    
+}
+
+footer{
+    flex: 1;
+    align-items: center;
 }
