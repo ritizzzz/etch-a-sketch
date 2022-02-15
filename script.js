@@ -2,7 +2,6 @@ const rowColumn = document.querySelector('input');
 const grid = document.querySelector('.grid');
 const gridRelayToUser = document.querySelector('span');
 const button = document.querySelector('button');
-const eachBoxInGrid = document.querySelectorAll('.child');
 
 rowColumn.addEventListener('change', setNewGrid)
 button.addEventListener('click', clear)
@@ -10,12 +9,22 @@ grid.addEventListener('mousedown', addHover)
 grid.addEventListener('mouseup', removeHover)
 
 
-function addHover(){
-
+function addHover(event){
+    if(event.button === 0){
+        document.querySelectorAll('.child').forEach((box) => box.addEventListener('mouseover', changeColorCallback))
+    }
 }
 
-function removeHover(){
+function changeColorCallback(event){
+    event.target.style.background = 'black';
+}
 
+function removeHover(event){
+    if(event.button === 0){    
+        document.querySelectorAll('.child').forEach((box) => {
+            box.removeEventListener('mouseover', changeColorCallback)
+        })
+    }
 }
 
 function setNewGrid(){
@@ -53,4 +62,5 @@ function clear(){
 
 
 
+createGrid(14)
 
