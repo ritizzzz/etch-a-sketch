@@ -17,7 +17,6 @@ header, footer{
     flex-direction: column;
     gap: 5px;
     align-items: center;
-    height: 100vh;
 }
 
 .clear-set{
@@ -74,7 +73,3 @@ a{
     
 }
 
-footer{
-    flex: 1;
-    align-items: center;
-}
